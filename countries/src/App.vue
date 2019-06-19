@@ -8,7 +8,7 @@
 
 <script>
 
-import CountriesList from './components/CountriesList.vue'
+
 import {partyBus} from './main.js'
 import CountryDetail from './components/CountryDetail.vue'
 import CountrySelect from './components/CountriesSelect'
@@ -33,7 +33,6 @@ export default {
     })
   },
   components: {
-    "countries-list": CountriesList,
     "country-detail": CountryDetail,
     "countries-select": CountrySelect
 

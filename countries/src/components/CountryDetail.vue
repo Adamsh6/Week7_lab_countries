@@ -26,5 +26,6 @@ li {
 }
 img {
   width: 35%;
+  border: 0.5px solid gray;
 }
 </style>

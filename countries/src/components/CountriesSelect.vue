@@ -26,12 +26,24 @@ export default {
       partyBus.$emit('country-selected', this.selectedCountry)
     },
     textInputHandler(){
+      let tempCountry = null
       this.countries.forEach((country) => {
         if(country.name.toLowerCase().startsWith(this.searchString.toLowerCase())){
           this.selectedCountry = country
           this.countrySelected()
+          tempCountry = country
         }
       })
+      //Next best match
+      if(!tempCountry){
+      this.countries.forEach((country) => {
+        if(country.name.toLowerCase().includes(this.searchString.toLowerCase())){
+          this.selectedCountry = country
+          this.countrySelected()
+        }
+      })
+    }
+
     }
   }
 }
