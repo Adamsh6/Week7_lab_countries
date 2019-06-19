@@ -1,6 +1,6 @@
 <template>
   <div class="main-container" id="app">
-    <!-- <countries-list :countries='countries'></countries-list> -->
+    <h2>Country Info!</h2>
     <countries-select :countries='countries'></countries-select>
     <country-detail :selectedCountry='selectedCountry'></country-detail>
   </div>

@@ -27,5 +27,6 @@ li {
 img {
   width: 35%;
   border: 0.5px solid gray;
+  padding: 0.006em;
 }
 </style>

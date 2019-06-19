@@ -1,9 +1,9 @@
 <template lang="html">
   <div>
+    <label>Search for a country: </label>
   <select v-on:change="countrySelected" v-model="selectedCountry">
-    <option @select="countrySelected" v-for="country in countries" :value="country">{{country.name}}</option>
+    <option  v-for="country in countries" :value="country">{{country.name}}</option>
   </select>
-
    <input v-on:input="textInputHandler" v-model="searchString" type="text" ></input>
 </div>
 </template>
@@ -15,7 +15,6 @@ export default {
   data(){
     return{
       selectedCountry: null,
-      testCountry: null,
       searchString: ""
     }
   },
