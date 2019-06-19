@@ -1,6 +1,7 @@
 <template>
   <div class="main-container" id="app">
-    <countries-list :countries='countries'></countries-list>
+    <!-- <countries-list :countries='countries'></countries-list> -->
+    <countries-select :countries='countries'></countries-select>
     <country-detail :selectedCountry='selectedCountry'></country-detail>
   </div>
 </template>
@@ -10,6 +11,7 @@
 import CountriesList from './components/CountriesList.vue'
 import {partyBus} from './main.js'
 import CountryDetail from './components/CountryDetail.vue'
+import CountrySelect from './components/CountriesSelect'
 
 export default {
   name: 'app',
@@ -32,7 +34,8 @@ export default {
   },
   components: {
     "countries-list": CountriesList,
-    "country-detail": CountryDetail
+    "country-detail": CountryDetail,
+    "countries-select": CountrySelect
 
   }
 }
@@ -42,10 +45,10 @@ export default {
 
 <style>
 
-.main-container {
+/* .main-container {
   display: flex;
   justify-content: space-between;
-}
+} */
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
