@@ -1,9 +1,9 @@
 <template lang="html">
 <div v-if="selectedCountry">
-<p>Name: {{selectedCountry.name}}</p>
-<p>Capital: {{selectedCountry.capital}}</p>
-<p>Population: {{selectedCountry.population}}</p>
-<p>Languages spoken:</p>
+<p><em>Name:</em> {{selectedCountry.name}}</p>
+<p><em>Capital:</em> {{selectedCountry.capital}}</p>
+<p><em>Population:</em> {{selectedCountry.population}}</p>
+<p><em>Languages spoken:</em></p>
 <ul>
   <li v-for="language in selectedCountry.languages">- {{language.name}}</li>
 </ul>
@@ -27,6 +27,10 @@ li {
 img {
   width: 35%;
   border: 0.5px solid gray;
-  padding: 0.006em;
+  padding: 0.02em;
+}
+em {
+  font-style: normal;
+  font-weight: bold;
 }
 </style>

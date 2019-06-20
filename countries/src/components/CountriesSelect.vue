@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import {partyBus} from '../main'
+import {eventBus} from '../main'
 export default {
   name: 'countries-select',
   data(){
@@ -22,7 +22,7 @@ export default {
   methods: {
     countrySelected(){
 
-      partyBus.$emit('country-selected', this.selectedCountry)
+      eventBus.$emit('country-selected', this.selectedCountry)
     },
     textInputHandler(){
       let tempCountry = null

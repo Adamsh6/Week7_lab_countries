@@ -9,7 +9,7 @@
 <script>
 
 
-import {partyBus} from './main.js'
+import {eventBus} from './main.js'
 import CountryDetail from './components/CountryDetail.vue'
 import CountrySelect from './components/CountriesSelect'
 
@@ -26,7 +26,7 @@ export default {
     .then(res => res.json())
     .then(countries => this.countries = countries)
 
-    partyBus.$on('country-selected', (country) => {
+    eventBus.$on('country-selected', (country) => {
     this.selectedCountry = country
 
 
